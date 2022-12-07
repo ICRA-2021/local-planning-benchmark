@@ -3,6 +3,7 @@ FROM osrf/ros:melodic-desktop-full
 RUN apt-get update && apt-get install -y \
       ros-melodic-navigation \
       ros-melodic-teb-local-planner \
+      libceres-dev \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /catkin_ws/src \
