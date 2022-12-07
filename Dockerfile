@@ -10,6 +10,6 @@ RUN mkdir -p /catkin_ws/src \
  && git clone https://github.com/NKU-MobFly-Robotics/p3dx.git \
  && git clone https://github.com/NKU-MobFly-Robotics/local-planning-benchmark.git
 
-RUN cd /catkin_ws \
+RUN . /opt/ros/$ROS_DISTRO/setup.sh \
+ && cd /catkin_ws \
  && catkin_make
-
