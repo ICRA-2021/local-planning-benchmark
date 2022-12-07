@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /catkin_ws/src \
- && cd ~/catkin_ws/src \
+ && cd /catkin_ws/src \
  && git clone https://github.com/NKU-MobFly-Robotics/p3dx.git \
  && git clone https://github.com/NKU-MobFly-Robotics/local-planning-benchmark.git
 
