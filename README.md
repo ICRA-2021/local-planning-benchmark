@@ -21,6 +21,20 @@ Please cite the following paper if you use this project in your research:
 
 ## 1. Quick Start
 
+### Using Docker
+
+Prerequisites:
+* [docker](https://docs.docker.com/engine/install/ubuntu/)
+* [nvidia-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)
+* [osrf/rocker](https://github.com/osrf/rocker)
+
+Open a terminal and start a simulation:
+```
+$ rocker --x11 --nvidia ghcr.io/icra-2021/local-planning-benchmark:melodic-devel
+```
+
+### Native installation
+
 The project has been tested on Ubuntu 16.04 (ROS Kinetic) and 18.04 (ROS Melodic). We highly recommend using Ubuntu 18.04 since Ubuntu 16.04 will no longer be supported after April 2021. In the following we will take ROS Melodic version as the example. The navigation simulation is performed by the powerful ROS navigation stack, wherein two local planners of DWA and TEB are tested. Therefore, please install these packages first:
 
 ```
