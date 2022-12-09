@@ -14,3 +14,9 @@ RUN mkdir -p /catkin_ws/src \
 RUN . /opt/ros/$ROS_DISTRO/setup.sh \
  && cd /catkin_ws \
  && catkin_make
+
+RUN sed --in-place --expression \
+      '$isource "/catkin_ws/devel/setup.bash"' \
+      /ros_entrypoint.sh
+
+CMD ["roslaunch", "move_base_benchmark", "move_base_benchmark.launch"]
