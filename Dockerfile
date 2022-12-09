@@ -8,8 +8,9 @@ RUN apt-get update && apt-get install -y \
 
 RUN mkdir -p /catkin_ws/src \
  && cd /catkin_ws/src \
- && git clone https://github.com/NKU-MobFly-Robotics/p3dx.git \
- && git clone https://github.com/NKU-MobFly-Robotics/local-planning-benchmark.git
+ && git clone https://github.com/NKU-MobFly-Robotics/p3dx.git
+ 
+COPY . /catkin_ws/src/.
 
 RUN . /opt/ros/$ROS_DISTRO/setup.sh \
  && cd /catkin_ws \
